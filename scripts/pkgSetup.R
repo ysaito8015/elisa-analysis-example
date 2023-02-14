@@ -20,7 +20,7 @@ dir.create(libDir)
 
 .libPaths(libDir)
 
-Sys.setenv("PKG_CXXFLAGS"="-std=c++22 -DBOOST_PHOENIX_NO_VARIADIC_EXPRESSION")
+Sys.setenv("PKG_CXXFLAGS"="-std=c++20 -DBOOST_PHOENIX_NO_VARIADIC_EXPRESSION")
 
 
 if (!requireNamespace("devtools", quietly = TRUE)) {

@@ -1,4 +1,14 @@
 # Analyse ELISA data in R
+
+## セットアップ
+
+```shell
+$ sudo apt install patchelf
+$ git clone https://github.com/ysaito8015/elisa-analysis-example
+$ cd ./elisa-analysis-example/scripts
+$ Rscript ./pkgSetup.R 2>&1 | tee pkg-setup.log
+```
+
 ## はじめに
 ELISA データの解釈には、標準曲線（検量線）の作成が必要です。
 検量線の作り方は主に３種類があります。
