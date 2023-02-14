@@ -14,9 +14,13 @@ pkgs <- c(
 
 parentScriptDir <- getwd()
 pkgDir <- file.path(parentScriptDir, "pkg")
-dir.create(pkgDir)
+if (!dir.exists(pkgDir)) {
+  dir.create(pkgDir)
+}
 libDir <- file.path(parentScriptDir, "lib")
+if (!dir.exists(pkgDir)) {
 dir.create(libDir)
+}
 
 .libPaths(libDir)
 
