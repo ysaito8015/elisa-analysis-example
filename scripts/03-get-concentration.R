@@ -10,8 +10,9 @@ Measured <- df2 %>%
             rep(9:16, 2),
             rep(17:24, 2),
             rep(25:32, 2),
-            rep(33:40, 2))
-        ) %>% # 各wellに入れたサンプルの番号をつける
+            rep(33:40, 2)
+        )
+    ) %>% # 各wellに入れたサンプルの番号をつける
     dplyr::mutate(Sample = as.factor(Sample)) %>%
     dplyr::group_by(Sample) %>%
     dplyr::summarise(
