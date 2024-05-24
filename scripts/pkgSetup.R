@@ -9,14 +9,19 @@ pkgs <- c(
           "purrr",
           "viridis",
           "drc",
-          "minpack.lm"
+          "minpack.lm",
+          "nplr"
 )
 
 parentScriptDir <- getwd()
 pkgDir <- file.path(parentScriptDir, "pkg")
-dir.create(pkgDir)
+if (!dir.exists(pkgDir)) {
+  dir.create(pkgDir)
+}
 libDir <- file.path(parentScriptDir, "lib")
-dir.create(libDir)
+if (!dir.exists(libDir)) {
+  dir.create(libDir)
+}
 
 .libPaths(libDir)
 
